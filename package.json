@@ -1,0 +1,41 @@
+{
+  "name": "corpd_zebra_test_first",
+  "version": "1.0.0",
+  "description": "Zebra test task (task 1)",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest --coverage",
+    "start": "live-server src",
+    "build": "babel src -d dist",
+    "lint": "eslint ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mrvotum/corpd_zebra_test_first.git"
+  },
+  "keywords": [
+    "Zebra"
+  ],
+  "author": "Vladimir",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mrvotum/corpd_zebra_test_first/issues"
+  },
+  "homepage": "https://github.com/mrvotum/corpd_zebra_test_first#readme",
+  "devDependencies": {
+    "@babel/cli": "^7.2.3",
+    "@babel/core": "^7.2.2",
+    "@babel/preset-env": "^7.3.1",
+    "babel-core": "^7.0.0-bridge.0",
+    "babel-jest": "^23.6.0",
+    "eslint": "^5.12.1",
+    "eslint-config-airbnb-base": "^13.1.0",
+    "eslint-plugin-import": "^2.16.0",
+    "jest": "^23.6.0",
+    "live-server": "^1.2.1"
+  },
+  "dependencies": {
+    "@babel/polyfill": "^7.2.5",
+    "swiper": "^6.3.4"
+  }
+}
