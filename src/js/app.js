@@ -1,13 +1,8 @@
 import Swiper from 'https://unpkg.com/swiper/swiper-bundle.esm.browser.min.js'
 
-// const swiperContainer = document.querySelector('[data-id=swiper-container]');
-// setTimeout(() => {
-//   swiperContainer.style.backgroundColor = 'red';
-// }, 900);
-// console.log(swiperContainer);
+// class 
 
 const swiperWrapper = document.querySelector('[data-id=swiper-wrapper]');
-// console.log(swiperWrapper.childElementCount);
 
 var swiper = new Swiper('.swiper-container', {
   effect: 'fade',
