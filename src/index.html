@@ -8,28 +8,42 @@
 	<title>Document</title>
 </head>
 <body>
-	<!-- Swiper -->
-	<div class="swiper-container">
-		<div class="swiper-wrapper">
-		  <div class="swiper-slide">Slide 1</div>
-		  <div class="swiper-slide">Slide 2</div>
-		  <div class="swiper-slide">Slide 3</div>
-		  <div class="swiper-slide">Slide 4</div>
-		  <div class="swiper-slide">Slide 5</div>
-		  <div class="swiper-slide">Slide 6</div>
-		  <div class="swiper-slide">Slide 7</div>
-		  <div class="swiper-slide">Slide 8</div>
-		  <div class="swiper-slide">Slide 9</div>
-		  <div class="swiper-slide">Slide 10</div>
+
+<header class="header">
+	<span class="header__title">хэдер</span>
+</header>
+
+<main class="main">
+<!-- Swiper -->
+<div class="swiper-container">
+	<div class="swiper-wrapper">
+		<div class="swiper-slide color_turquoise">
+			<div class="column__left fade-animation">
+				<h1 class="column__title">Название раздела 1</h1>
+				<span class="column__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</span>
+			</div>
+			<!-- <div class="img__holder"> -->
+				<img class="img Clients_01" src="./img/Clients_01.png" alt="Клиенты">
+			<!-- </div> -->
+			<div class="column__right fade-animation">
+				<span class="column__counter">100 <span class="column__counter_small">тыс.</span></span>
+				<span class="column__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</span>
+			</div>
 		</div>
-		<!-- Add Arrows -->
-		<div class="swiper-button-next"></div>
-		<div class="swiper-button-prev"></div>
-		<!-- Add Pagination -->
-		<div class="swiper-pagination"></div>
-	  </div>
+		<div class="swiper-slide">Slide 2</div>
+		<div class="swiper-slide">Slide 3</div>
+		<div class="swiper-slide">Slide 4</div>
+	</div>
+	<!-- Add Arrows -->
+	<div class="swiper-button-next"></div>
+	<div class="swiper-button-prev"></div>
+	<!-- Add Pagination -->
+	<div class="swiper-pagination"></div>
+	</div>
+</main>
 	
-	  <!-- Swiper JS -->
-	  <script type="module" src="js/app.js"></script>
+	
+<!-- Swiper JS -->
+<script type="module" src="js/app.js"></script>
 </body>
 </html>
