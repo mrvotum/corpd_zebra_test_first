@@ -27,6 +27,7 @@ body {
   display: flex;
   justify-content: space-between;
   width: 100%;
+  height: calc(100vh - 6.05vw); /* минус высота header'а */
   padding: 2.24vw 12.97vw 0;
   text-align: center;
   background: #fff;

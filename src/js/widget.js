@@ -32,41 +32,41 @@ export default class Widget {
       this.clickerCount += 1;
     });
 
-    this.swiper.pagination.el.addEventListener('click', (event) => {
-      const imgArr = this.swiperWrapper.getElementsByClassName('img');
-      // На какую страницу сейчас переходим
-      this.clickerCount = event.target.getAttribute('aria-label').split(' ');
-      this.clickerCount[3] = parseInt(this.clickerCount, 10);
-      console.log(`Нажали ${this.clickerCount}`);
+    // this.swiper.pagination.el.addEventListener('click', (event) => {
+    //   const imgArr = this.swiperWrapper.getElementsByClassName('img');
+    //   // На какую страницу сейчас переходим
+    //   this.clickerCount = event.target.getAttribute('aria-label').split(' ');
+    //   this.clickerCount[3] = parseInt(this.clickerCount, 10);
+    //   console.log(`Нажали ${this.clickerCount}`);
 
-      switch (this.clickerCount) {
-        case 1:
-          imgArr[0].style.transform = 'translateX(0)';
-          imgArr[1].style.transform = 'translateX(100vw)';
-          imgArr[2].style.transform = 'translateX(100vw)';
-          imgArr[3].style.transform = 'translateX(100vw)';
-          break;
-        case 2:
-          imgArr[0].style.transform = 'translateX(-100vw)';
-          imgArr[1].style.transform = 'translateX(0)';
-          imgArr[2].style.transform = 'translateX(100vw)';
-          imgArr[3].style.transform = 'translateX(100vw)';
-          break;
-        case 3:
-          imgArr[0].style.transform = 'translateX(-100vw)';
-          imgArr[1].style.transform = 'translateX(-100vw)';
-          imgArr[2].style.transform = 'translateX(0)';
-          imgArr[3].style.transform = 'translateX(100vw)';
-          break;
-        case 4:
-          imgArr[0].style.transform = 'translateX(-100vw)';
-          imgArr[1].style.transform = 'translateX(-100vw)';
-          imgArr[2].style.transform = 'translateX(-100vw)';
-          imgArr[3].style.transform = 'translateX(0)';
-          break;
-        default:
-          console.error('Нет таких значений');
-      }
-    });
+    //   switch (this.clickerCount) {
+    //     case 1:
+    //       imgArr[0].style.transform = 'translateX(0)';
+    //       imgArr[1].style.transform = 'translateX(100vw)';
+    //       imgArr[2].style.transform = 'translateX(100vw)';
+    //       imgArr[3].style.transform = 'translateX(100vw)';
+    //       break;
+    //     case 2:
+    //       imgArr[0].style.transform = 'translateX(-100vw)';
+    //       imgArr[1].style.transform = 'translateX(0)';
+    //       imgArr[2].style.transform = 'translateX(100vw)';
+    //       imgArr[3].style.transform = 'translateX(100vw)';
+    //       break;
+    //     case 3:
+    //       imgArr[0].style.transform = 'translateX(-100vw)';
+    //       imgArr[1].style.transform = 'translateX(-100vw)';
+    //       imgArr[2].style.transform = 'translateX(0)';
+    //       imgArr[3].style.transform = 'translateX(100vw)';
+    //       break;
+    //     case 4:
+    //       imgArr[0].style.transform = 'translateX(-100vw)';
+    //       imgArr[1].style.transform = 'translateX(-100vw)';
+    //       imgArr[2].style.transform = 'translateX(-100vw)';
+    //       imgArr[3].style.transform = 'translateX(0)';
+    //       break;
+    //     default:
+    //       console.error('Нет таких значений');
+    //   }
+    // });
   }
 }
