@@ -11,7 +11,7 @@ export default class Widget {
 
 
   createListeners() {
-    this.swiper.navigation.prevEl.addEventListener("click", () => {
+    this.swiper.navigation.prevEl.addEventListener('click', () => {
       console.log('предыдущий слайд');
       const imgArr = this.swiperWrapper.getElementsByClassName('img');
 
@@ -21,7 +21,7 @@ export default class Widget {
       imgArr[this.clickerCount - 1].style.transform = 'translateX(0)';
     });
 
-    this.swiper.navigation.nextEl.addEventListener("click", () => {
+    this.swiper.navigation.nextEl.addEventListener('click', () => {
       const imgArr = this.swiperWrapper.getElementsByClassName('img');
 
       console.log('следующий слайд');
@@ -32,11 +32,11 @@ export default class Widget {
       this.clickerCount += 1;
     });
 
-    this.swiper.pagination.el.addEventListener("click", (event) => {
+    this.swiper.pagination.el.addEventListener('click', (event) => {
       const imgArr = this.swiperWrapper.getElementsByClassName('img');
       // На какую страницу сейчас переходим
-      this.clickerCount = event.target.getAttribute('aria-label').split(' ')[3];
-      this.clickerCount = parseInt(this.clickerCount, 10);
+      this.clickerCount = event.target.getAttribute('aria-label').split(' ');
+      this.clickerCount[3] = parseInt(this.clickerCount, 10);
       console.log(`Нажали ${this.clickerCount}`);
 
       switch (this.clickerCount) {
@@ -65,7 +65,7 @@ export default class Widget {
           imgArr[3].style.transform = 'translateX(0)';
           break;
         default:
-          console.error("Нет таких значений");
+          console.error('Нет таких значений');
       }
     });
   }

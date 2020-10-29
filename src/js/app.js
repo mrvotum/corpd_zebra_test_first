@@ -1,5 +1,5 @@
-import Swiper from 'https://unpkg.com/swiper/swiper-bundle.esm.browser.min.js'
-import Widget from '../js/widget.js';
+import Swiper from 'https://unpkg.com/swiper/swiper-bundle.esm.browser.min.js';
+import Widget from './widget.js';
 
 const swiper = new Swiper('.swiper-container', {
   effect: 'fade',
