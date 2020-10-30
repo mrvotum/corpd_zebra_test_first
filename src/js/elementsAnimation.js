@@ -21,7 +21,7 @@ export default class ElementsAnimation {
       this.newSlide.style.transform = 'translateX(-100vw)';
       this.oldSlide.style.transform = 'translateX(100vw)';
     }
-    
+
     setTimeout(() => {
       this.oldSlide.style.transition = '0.6s';
       this.newSlide.style.transition = '0.6s';

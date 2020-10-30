@@ -1,4 +1,4 @@
-import ElementsAnimation from './elementsAnimation.js';
+import ElementsAnimation from './elementsAnimation';
 
 export default class Widget {
   constructor(swiper) {
@@ -14,7 +14,8 @@ export default class Widget {
 
   createListeners() {
     this.swiper.on('slideChange', function (swiper) {
-      // console.log(`Это индекс слайда текущего: ${swiper.activeIndex} + 1, а это старого: ${swiper.previousIndex} + 1`);
+      // console.log(`Это индекс слайда текущего: ${swiper.activeIndex} + 1,
+      // а это старого: ${swiper.previousIndex} + 1`);
 
       new ElementsAnimation(swiper.previousIndex, swiper.activeIndex).imageAnimaion();
     });
