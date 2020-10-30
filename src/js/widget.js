@@ -1,3 +1,5 @@
+import ElementsAnimation from './elementsAnimation.js';
+
 export default class Widget {
   constructor(swiper) {
     this.swiper = swiper;
@@ -6,67 +8,15 @@ export default class Widget {
   }
 
   create() {
-    this.createListeners();
+    new ElementsAnimation(0, 0).imageAnimaion();
+    this.createListeners(this.swiper, this.kek);
   }
 
-
   createListeners() {
-    this.swiper.navigation.prevEl.addEventListener('click', () => {
-      console.log('предыдущий слайд');
-      const imgArr = this.swiperWrapper.getElementsByClassName('img');
+    this.swiper.on('slideChange', function (swiper) {
+      // console.log(`Это индекс слайда текущего: ${swiper.activeIndex} + 1, а это старого: ${swiper.previousIndex} + 1`);
 
-      this.clickerCount -= 1;
-
-      imgArr[this.clickerCount].style.transform = 'translateX(100vw)';
-      imgArr[this.clickerCount - 1].style.transform = 'translateX(0)';
+      new ElementsAnimation(swiper.previousIndex, swiper.activeIndex).imageAnimaion();
     });
-
-    this.swiper.navigation.nextEl.addEventListener('click', () => {
-      const imgArr = this.swiperWrapper.getElementsByClassName('img');
-
-      console.log('следующий слайд');
-
-      imgArr[this.clickerCount - 1].style.transform = 'translateX(-100vw)';
-      imgArr[this.clickerCount].style.transform = 'translateX(0)';
-
-      this.clickerCount += 1;
-    });
-
-    // this.swiper.pagination.el.addEventListener('click', (event) => {
-    //   const imgArr = this.swiperWrapper.getElementsByClassName('img');
-    //   // На какую страницу сейчас переходим
-    //   this.clickerCount = event.target.getAttribute('aria-label').split(' ');
-    //   this.clickerCount[3] = parseInt(this.clickerCount, 10);
-    //   console.log(`Нажали ${this.clickerCount}`);
-
-    //   switch (this.clickerCount) {
-    //     case 1:
-    //       imgArr[0].style.transform = 'translateX(0)';
-    //       imgArr[1].style.transform = 'translateX(100vw)';
-    //       imgArr[2].style.transform = 'translateX(100vw)';
-    //       imgArr[3].style.transform = 'translateX(100vw)';
-    //       break;
-    //     case 2:
-    //       imgArr[0].style.transform = 'translateX(-100vw)';
-    //       imgArr[1].style.transform = 'translateX(0)';
-    //       imgArr[2].style.transform = 'translateX(100vw)';
-    //       imgArr[3].style.transform = 'translateX(100vw)';
-    //       break;
-    //     case 3:
-    //       imgArr[0].style.transform = 'translateX(-100vw)';
-    //       imgArr[1].style.transform = 'translateX(-100vw)';
-    //       imgArr[2].style.transform = 'translateX(0)';
-    //       imgArr[3].style.transform = 'translateX(100vw)';
-    //       break;
-    //     case 4:
-    //       imgArr[0].style.transform = 'translateX(-100vw)';
-    //       imgArr[1].style.transform = 'translateX(-100vw)';
-    //       imgArr[2].style.transform = 'translateX(-100vw)';
-    //       imgArr[3].style.transform = 'translateX(0)';
-    //       break;
-    //     default:
-    //       console.error('Нет таких значений');
-    //   }
-    // });
   }
 }

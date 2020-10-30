@@ -223,10 +223,19 @@ body {
 }
 
 /* Картинки */
-.img {
-  transition: .9s;
-  ;
+.img__holder {
+  max-width: 39vw;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  transform: translateX(100vw);
+  /* transition: .9s; */
 }
+
+/* .img {
+  transition: .9s;
+} */
 
 .clients_01 {
   width: 28.54vw;
@@ -237,7 +246,7 @@ body {
 
   margin-top: -1.56vw;
 
-  transform: translateX(100vw);
+  /* transform: translateX(100vw); */
 }
 
 .partners {
@@ -245,7 +254,7 @@ body {
 
   margin-top: 4.32vw;
 
-  transform: translateX(100vw);
+  /* transform: translateX(100vw); */
 }
 
 .clients_02 {
@@ -253,7 +262,7 @@ body {
 
   margin-top: -.88vw; /* -17px; */
 
-  transform: translateX(100vw);
+  /* transform: translateX(100vw); */
 }
 
 /* Картинки */

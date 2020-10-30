@@ -4,6 +4,7 @@ import Widget from './widget.js';
 const swiper = new Swiper('.swiper-container', {
   effect: 'fade',
   speed: 900,
+  // allowTouchMove: false,
   navigation: {
     nextEl: '.swiper-button-next',
     prevEl: '.swiper-button-prev',
@@ -11,11 +12,6 @@ const swiper = new Swiper('.swiper-container', {
   pagination: {
     el: '.swiper-pagination',
     clickable: true,
-  },
-  on: {
-    slideChange: function () {
-      console.log('Смена слайда');
-    },
   },
 });
 
