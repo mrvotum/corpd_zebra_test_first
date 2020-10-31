@@ -3,8 +3,7 @@ import Widget from './widget.js';
 
 const swiper = new Swiper('.swiper-container', {
   effect: 'fade',
-  speed: 900,
-  // allowTouchMove: false,
+  speed: 400,
   navigation: {
     nextEl: '.swiper-button-next',
     prevEl: '.swiper-button-prev',

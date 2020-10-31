@@ -29,7 +29,34 @@ export default class ElementsAnimation {
     }, 10);
     setTimeout(() => {
       this.oldSlide.style.transition = 'none';
-      // this.newSlide.style.transition = 'none';
     }, 600);
+  }
+
+  contentAnimaionShowMode(columnsArr) {
+    for (let i = 0; i < columnsArr.length; i += 1) {
+      const element = columnsArr[i];
+
+      try {
+        element.classList.remove('hideMode');
+      } catch (error) {
+        console.error('Таких слайдов нет');
+      }
+
+      element.classList.add('showMode');
+    }
+  }
+
+  contentAnimaionHideMode(columnsArr) {
+    for (let i = 0; i < columnsArr.length; i += 1) {
+      const element = columnsArr[i];
+
+      try {
+        element.classList.remove('showMode');
+      } catch (error) {
+        console.error('Таких слайдов нет');
+      }
+
+      element.classList.add('hideMode');
+    }
   }
 }
