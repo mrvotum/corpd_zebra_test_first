@@ -32,6 +32,7 @@ export default class ElementsAnimation {
     }, 600);
   }
 
+  // eslint-disable-next-line
   contentAnimaionShowMode(columnsArr) {
     for (let i = 0; i < columnsArr.length; i += 1) {
       const element = columnsArr[i];
@@ -46,6 +47,7 @@ export default class ElementsAnimation {
     }
   }
 
+  // eslint-disable-next-line
   contentAnimaionHideMode(columnsArr) {
     for (let i = 0; i < columnsArr.length; i += 1) {
       const element = columnsArr[i];

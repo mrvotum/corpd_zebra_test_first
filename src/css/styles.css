@@ -178,14 +178,14 @@ body {
   text-transform: uppercase;
 }
 
-.swiper-column {
+.column {
   width: 18.23vw; /* 17.6vw; */
 
   transition: .9s;
   text-align: left;
 }
 
-.swiper-column__title {
+.column__title {
   font-family: 'Roboto-300';
   font-size: 2.03vw;
 
@@ -197,14 +197,14 @@ body {
   text-transform: uppercase;
 }
 
-.swiper-column__text {
+.column__text {
   font-family: 'Roboto-500';
   font-size: 1.25vw;
 
   line-height: 110%;
 }
 
-.swiper-column__counter {
+.column__counter {
   font-family: 'Roboto-500';
   font-size: 6.25vw;
 
@@ -214,7 +214,7 @@ body {
   margin-top: 7.5vw;
 }
 
-.swiper-column__counter_small {
+.column__counter_small {
   font-size: 2.5vw;
 
   display: inline-block;
