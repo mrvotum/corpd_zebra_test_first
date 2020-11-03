@@ -1,4 +1,5 @@
-import ElementsAnimation from './elementsAnimation';
+// eslint-disable-next-line import/extensions
+import ElementsAnimation from './elementsAnimation.js';
 
 export default class Widget {
   constructor(swiper) {
